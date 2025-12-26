@@ -52,6 +52,11 @@ public class NutritionFacts {
         }
 
         public NutritionFacts build() {
+            // (AI) 유효성 검사 추가
+            // 예: 칼로리가 음수일 수 없음
+            if (calories < 0) {
+                throw new IllegalStateException("Calories cannot be negative");
+            }
             return new NutritionFacts(this);
         }
     }
