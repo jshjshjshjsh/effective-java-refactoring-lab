@@ -8,29 +8,52 @@ public class NutritionFacts {
     private final int sodium;       // (mg)                선택
     private final int carbohydrate; // (g)                 선택
 
-    public NutritionFacts(int servingSize, int servings) {
-        this(servingSize, servings, 0);
+    private NutritionFacts(Builder builder) {
+        this.servingSize = builder.servingSize;
+        this.servings = builder.servings;
+        this.calories = builder.calories;
+        this.fat = builder.fat;
+        this.sodium = builder.sodium;
+        this.carbohydrate = builder.carbohydrate;
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories) {
-        this(servingSize, servings, calories, 0);
-    }
+    public static class Builder{
+        private final int servingSize;  // (mL, 1회 제공량)     필수
+        private final int servings;     // (회, 총 n회 제공량)   필수
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat) {
-        this(servingSize, servings, calories, fat, 0);
-    }
+        private int calories        = 0; // (kCal)              선택
+        private int fat             = 0; // (g)                 선택
+        private int sodium          = 0; // (mg)                선택
+        private int carbohydrate    = 0; // (g)                 선택
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium) {
-        this(servingSize, servings, calories, fat, sodium, 0);
-    }
+        public Builder(final int servingSize, final int servings) {
+            this.servingSize = servingSize;
+            this.servings = servings;
+        }
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
-        this.servingSize  = servingSize;
-        this.servings     = servings;
-        this.calories     = calories;
-        this.fat          = fat;
-        this.sodium       = sodium;
-        this.carbohydrate = carbohydrate;
+        public Builder calories(int calories) {
+            this.calories = calories;
+            return this;
+        }
+
+        public Builder fat(int fat) {
+            this.fat = fat;
+            return this;
+        }
+
+        public Builder sodium(int sodium) {
+            this.sodium = sodium;
+            return this;
+        }
+
+        public Builder carbohydrate(int carbohydrate) {
+            this.carbohydrate = carbohydrate;
+            return this;
+        }
+
+        public NutritionFacts build() {
+            return new NutritionFacts(this);
+        }
     }
 
     // Getters included for testing

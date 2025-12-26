@@ -10,8 +10,14 @@ class NutritionFactsTest {
     @DisplayName("점층적 생성자 패턴 사용 - 코카콜라")
     void createCocaCola() {
         // Given & When
-        // 매개변수 순서 헷갈림: servingSize, servings, calories, fat, sodium, carbohydrate
-        NutritionFacts cocaCola = new NutritionFacts(240, 8, 100, 0, 35, 27);
+
+        // 리팩토링 코드
+        NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
+                .calories(100)
+                .fat(0)
+                .sodium(35)
+                .carbohydrate(27)
+                .build();
 
         // Then
         assertThat(cocaCola.getServingSize()).isEqualTo(240);
