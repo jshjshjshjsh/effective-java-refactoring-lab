@@ -6,20 +6,17 @@ public class Book {
     private boolean isTranslation;
     private int year;
 
-    // 1. 기본 책 생성
-    public Book(String title, String author, int year) {
+    private Book(){}
+    private Book(String title, String author, boolean isTranslation, int year){
         this.title = title;
         this.author = author;
+        this.isTranslation = isTranslation;
         this.year = year;
-        this.isTranslation = false;
     }
 
-    // 2. 번역본 생성 (파라미터 타입과 순서가 위와 비슷해서 헷갈림)
-    public Book(String title, String author, int year, boolean isTranslation) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
-        this.isTranslation = isTranslation;
+    // 리펙토링 코드
+    public static Book newInstance(String title, String author, boolean isTranslation, int year){
+        return new Book(title, author, isTranslation, year);
     }
 
     // Getter methods

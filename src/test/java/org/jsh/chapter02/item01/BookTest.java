@@ -10,8 +10,7 @@ class BookTest {
     @DisplayName("일반 책 생성 검증")
     void createOriginalBook() {
         // Given & When
-        // TODO: Refactoring 시 정적 팩터 메서드로 변경 필요
-        Book book = new Book("Effective Java", "Joshua Bloch", 2018);
+        Book book = Book.newInstance("Effective Java", "Joshua Bloch", false, 2018);
 
         // Then
         assertThat(book.getTitle()).isEqualTo("Effective Java");
@@ -23,8 +22,7 @@ class BookTest {
     @DisplayName("번역본 책 생성 검증")
     void createTranslatedBook() {
         // Given & When
-        // TODO: Refactoring 시 정적 팩터 메서드로 변경 필요
-        Book book = new Book("이펙티브 자바", "Joshua Bloch", 2018, true);
+        Book book = Book.newInstance("이펙티브 자바", "Joshua Bloch", true , 2018);
 
         // Then
         assertThat(book.getTitle()).isEqualTo("이펙티브 자바");
