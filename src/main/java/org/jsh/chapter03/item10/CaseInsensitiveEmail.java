@@ -15,10 +15,6 @@ public class CaseInsensitiveEmail {
         if (o instanceof CaseInsensitiveEmail) {
             return email.equalsIgnoreCase(((CaseInsensitiveEmail) o).email);
         }
-        // 문제의 구간: String과도 비교를 시도함 (한 방향으로만 작동)
-        if (o instanceof String) {
-            return email.equalsIgnoreCase((String) o);
-        }
         return false;
     }
 
