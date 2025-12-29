@@ -1,6 +1,5 @@
 package org.jsh.chapter03.item12;
 
-// Item 11에서 완성한 코드를 패키지만 바꿔서 가져옵니다.
 import java.util.Objects;
 
 public class PhoneNumber {
