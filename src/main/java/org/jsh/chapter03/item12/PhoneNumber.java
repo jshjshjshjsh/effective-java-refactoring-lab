@@ -30,4 +30,9 @@ public class PhoneNumber {
     }
 
     // toString() 없음 -> Object.toString() 사용됨
+
+    @Override
+    public String toString() {
+        return String.format("%d-%d-%d", areaCode, prefix, lineNum);
+    }
 }
