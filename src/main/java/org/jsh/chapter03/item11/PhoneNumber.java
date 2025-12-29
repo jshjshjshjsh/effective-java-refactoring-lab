@@ -1,5 +1,7 @@
 package org.jsh.chapter03.item11;
 
+import java.util.Objects;
+
 public class PhoneNumber {
     private final short areaCode, prefix, lineNum;
 
@@ -28,4 +30,8 @@ public class PhoneNumber {
 
     // hashCode 메서드가 없음! (치명적 문제)
     // Object의 기본 hashCode는 객체의 메모리 주소를 기반으로 생성됨.
+    @Override
+    public int hashCode() {
+        return Objects.hash(areaCode, prefix, lineNum);
+    }
 }
