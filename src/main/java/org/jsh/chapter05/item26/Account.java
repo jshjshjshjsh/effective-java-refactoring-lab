@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Account {
     // Good: Raw Type 제거하여 타입 제한
-    private final List<String> history = new ArrayList<String>();
+    private final List<String> history = new ArrayList<>();
 
     // String만 받음
     public void addHistory(String record) {
