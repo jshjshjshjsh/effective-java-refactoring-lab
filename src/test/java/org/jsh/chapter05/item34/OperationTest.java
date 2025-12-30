@@ -21,5 +21,6 @@ class OperationTest {
         // 실행해야 비로소 에러 발생
         //assertThatThrownBy(() -> Operation.apply(99, x, y))
         //        .isInstanceOf(AssertionError.class);
+        assertThat(String.valueOf(Operation.MINUS)).isEqualTo("-");
     }
 }

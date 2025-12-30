@@ -17,6 +17,11 @@ public enum Operation {
         this.op = op;
     }
 
+    @Override
+    public String toString() {
+        return symbol;
+    }
+
     // 연산을 수행하는 메서드 (상수가 추가되면 여기도 수정해야 함 -> 실수하기 딱 좋음)
     public double apply(double x, double y) {
         return op.applyAsDouble(x, y);
