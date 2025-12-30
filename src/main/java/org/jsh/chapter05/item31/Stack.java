@@ -22,13 +22,15 @@ public class Stack<E> {
     }
 
     // 문제의 구간 1: src의 타입이 정확히 Iterable<E>여야만 함
-    public void pushAll(Iterable<E> src) {
+    // E의 하위 타입도 인자로 받을 수 있도록 허용 (Producer)
+    public void pushAll(Iterable<? extends E> src) {
         for (E e : src)
             push(e);
     }
 
     // 문제의 구간 2: dst의 타입이 정확히 Collection<E>여야만 함
-    public void popAll(Collection<E> dst) {
+    // E의 상위 타입 컬렉션에도 데이터를 담을 수 있도록 허용 (Consumer)
+    public void popAll(Collection<? super E> dst) {
         while (!isEmpty())
             dst.add(pop());
     }
