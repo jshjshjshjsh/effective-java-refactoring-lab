@@ -20,9 +20,17 @@
 
 | Chapter | Item | Topic | Issue | PR | Status |
 | :---: | :---: | :--- | :---: | :---: | :---: |
-| **02** | **01** | 생성자 대신 정적 팩터리 메서드를 고려하라 | [#1](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/1) | [#2](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/2) | ✅ 완료 |
-| **02** | **02** | 생성자에 매개변수가 많다면 빌더를 고려하라 | [#3](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/3) | [#4](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/4) | ✅ 완료 |
-| **02** | **09** | try-finally보다는 try-with-resources를 사용하라 | [#5](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/5) | [#6](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/6) | ✅ 완료 |
+| **02** | **01** | **[Item 01] 생성자 대신 정적 팩터리 메서드를 고려하라** | [#1](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/1) | [#2](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/2) | ✅ 완료 |
+| **02** | **02** | **[Item 02] 생성자에 매개변수가 많다면 빌더를 고려하라** | [#3](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/3) | [#4](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/4) | ✅ 완료 |
+| **02** | **09** | **[Item 09] try-finally보다는 try-with-resources를 사용하라** | [#5](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/5) | [#6](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/6) | ✅ 완료 |
+| **03** | **10** | **[Item 10] equals는 일반 규약을 지켜 재정의하라** | [#7](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/7) | [#8](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/8) | ✅ 완료 |
+| **03** | **11** | **[Item 11] equals를 재정의하려거든 hashCode도 재정의하라** | [#9](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/9) | [#10](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/10) | ✅ 완료 |
+| **03** | **12** | **[Item 12] toString을 항상 재정의하라** | [#11](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/11) | [#12](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/12) | ✅ 완료 |
+| **04** | **18** | **[Item 18] 상속보다는 컴포지션을 사용하라** | [#13](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/13) | [#14](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/14) | ✅ 완료 |
+| **05** | **26** | **[Item 26] 로 타입(Raw type)은 사용하지 말라** | [#15](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/15) | [#16](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/16) | ✅ 완료 |
+| **05** | **31** | **[Item 31] 한정적 와일드카드를 사용해 API 유연성을 높이라** | [#17](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/17) | [#18](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/18) | ✅ 완료 |
+| **05** | **34** | **[Item 34] int 상수 대신 열거 타입(Enum)을 사용하라** | [#19](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/19) | [#20](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/20) | ✅ 완료 |
+| **07** | **45** | **[Item 45] 스트림은 주의해서 사용하라** | [#21](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/21) | [#22](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/22) | ✅ 완료 |
 
 > * **PR / Issue**: 학습이 완료된(Closed) PR 또는 Issue 번호를 링크합니다.
 > * **Status**: 🏃 진행 중, ✅ 완료, 🔒 예정
