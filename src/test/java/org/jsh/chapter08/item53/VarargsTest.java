@@ -15,7 +15,7 @@ class VarargsTest {
 
         // 2. 문제 상황: 인수를 0개 넣어도 컴파일은 됨 (실행해야 에러 발생)
         // After 리팩토링 후에는: min() 호출 자체가 컴파일 에러가 나야 함
-        assertThatThrownBy(() -> Varargs.min())
-                .isInstanceOf(IllegalArgumentException.class);
+        //assertThatThrownBy(() -> Varargs.min())
+        //        .isInstanceOf(IllegalArgumentException.class);
     }
 }

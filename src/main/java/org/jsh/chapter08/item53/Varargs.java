@@ -2,13 +2,9 @@ package org.jsh.chapter08.item53;
 
 public class Varargs {
 
-    // Bad: 0개의 인수가 들어오면 런타임에 실패함
-    public static int min(int... args) {
-        if (args.length == 0)
-            throw new IllegalArgumentException("인수가 1개 이상 필요합니다.");
-
-        int min = args[0];
-        for (int i = 1; i < args.length; i++) {
+    // 첫 번째 인자를 입력하게 강제하여, 잘못된 값을 넣을 시 컴파일 에러를 유도
+    public static int min(int min, int... args) {
+        for (int i = 0; i < args.length; i++) {
             if (args[i] < min)
                 min = args[i];
         }
