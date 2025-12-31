@@ -16,12 +16,12 @@ class MaxTest {
         List<Integer> list = List.of(1, 3, 2);
 
         // When & Then (정상 케이스)
-        assertThat(Max.max(list)).isEqualTo(3);
+        assertThat(Max.max(list)).contains(3);
 
         // When & Then (예외 케이스)
-        // Before: 빈 리스트를 넣으면 예외가 발생해야 함
-        assertThatThrownBy(() -> Max.max(List.<Integer>of()))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("빈 컬렉션입니다.");
+        //assertThatThrownBy(() -> Max.max(List.<Integer>of()))
+        //        .isInstanceOf(IllegalArgumentException.class)
+        //        .hasMessage("빈 컬렉션입니다.");
+        assertThat(Max.max(List.<Integer>of())).isEqualTo(Optional.empty());
     }
 }
