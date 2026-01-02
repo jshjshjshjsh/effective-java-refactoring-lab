@@ -17,9 +17,9 @@ class AccountTest {
         // 실제 코드에서 호출할 땐 try-catch를 덕지덕지 발라야 함.
 
         assertThatThrownBy(() -> account.withdraw(-100))
-                .isInstanceOf(Account.MyCustomInvalidMoneyException.class);
+                .isInstanceOf(IllegalArgumentException.class);
 
         assertThatThrownBy(() -> account.withdraw(2000))
-                .isInstanceOf(InsufficientResourcesException.class);
+                .isInstanceOf(IllegalStateException.class);
     }
 }
