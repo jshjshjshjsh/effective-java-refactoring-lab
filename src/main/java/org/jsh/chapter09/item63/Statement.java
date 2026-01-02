@@ -12,4 +12,12 @@ public class Statement {
         }
         return result;
     }
+
+    public static String makeLineByStringBuilder(List<String> items) {
+        StringBuilder sb = new StringBuilder();
+        for (String item : items) {
+            sb.append(item);
+        }
+        return sb.toString();
+    }
 }

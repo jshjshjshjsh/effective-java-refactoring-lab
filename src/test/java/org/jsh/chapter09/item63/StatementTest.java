@@ -23,11 +23,24 @@ class StatementTest {
         long end1 = System.currentTimeMillis();
         long time1 = end1 - start1;
 
+        // 2. [Good] StringBuilder 방식 측정
+        long start2 = System.currentTimeMillis();
+        String result2 = Statement.makeLineByStringBuilder(items);
+        long end2 = System.currentTimeMillis();
+        long time2 = end2 - start2;
+
         // 결과 리포트 출력
         System.out.println("=========================================");
         System.out.println("데이터 개수: " + items.size() + "개");
         System.out.println("1. String (+) 방식 소요 시간: " + time1 + "ms");
+        System.out.println("2. StringBuilder 방식 소요 시간: " + time2 + "ms");
         System.out.println("=========================================");
 
+        // Then:
+        // 1. 결과값은 같아야 한다.
+        assertThat(result2).isEqualTo(result1);
+
+        // 2. StringBuilder가 무조건 더 빨라야 한다.
+        assertThat(time2).isLessThan(time1);
     }
 }
