@@ -13,15 +13,14 @@ class InventoryServiceTest {
         InventoryService service = new InventoryService();
 
         // When
-        // 예외가 터지는 건 확인 (IndexOutOfBoundsException)
-        // 하지만 이건 우리가 원하는 '주문 실패 예외'가 아님.
         assertThatThrownBy(() -> service.ship(999))
-                .isInstanceOf(IndexOutOfBoundsException.class);
+                .isInstanceOf(InventoryService.OrderProcessingException.class) // 우리가 만든 고수준 예외
+                .hasMessageContaining("ID: 999") // 실패 정보 포함 확인
+                .hasCauseInstanceOf(IndexOutOfBoundsException.class); // 근본 원인이 잘 연결됐는지 확인
 
-        // Then (치명적인 문제)
-        // 예외가 터졌으면 재고는 그대로 10이어야 하는데, 이미 9로 줄어있음!
+        // Then (실패 원자성 검증)
         assertThat(service.getStock())
-                .describedAs("예외가 발생했으나 재고가 차감되어 실패 원자성이 깨짐")
-                .isEqualTo(9);
+                .describedAs("예외가 발생했으므로 재고는 줄어들지 않아야 한다")
+                .isEqualTo(10); // 9가 아니라 10이어야 통과
     }
 }

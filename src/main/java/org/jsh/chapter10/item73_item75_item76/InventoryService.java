@@ -8,21 +8,32 @@ public class InventoryService {
     private int stock = 10; // 초기 재고 10개
     private final List<String> database = new ArrayList<>(); // 비어있는 DB (저수준 구현체)
 
-    // Bad:
-    // 1. 저수준 예외(IndexOutOfBoundsException)가 그대로 노출됨 (Item 73 위반)
-    // 2. 예외가 터지면 stock만 줄어든 상태로 남음 (Item 76 - 실패 원자성 위반)
+    // Good: Unchecked 예외라 'throws' 선언 필요 없음
     public void ship(int orderId) {
-        // [문제의 지점] 상태를 먼저 변경해버림
-        stock--;
+        try {
+            // 1. 위험한 작업 먼저 시도 (여기서 터지면 catch로 점프)
+            String item = database.get(orderId);
 
-        // 여기서 예외 발생! (DB에 없는 인덱스 조회)
-        // Item 75 위반: 예외 메시지에 아무 정보도 없음 (그냥 시스템 예외)
-        String item = database.get(orderId);
+            // 2. 위험 구간 통과 후 상태 변경 (Item 76: 실패 원자성 확보)
+            stock--;
 
-        System.out.println("배송 완료: " + item);
+            System.out.println("배송 완료: " + item);
+
+        } catch (IndexOutOfBoundsException e) {
+            // Item 73 & 75: 예외 번역 + 상세 메시지 + 원인(cause) 전달
+            throw new OrderProcessingException("주문 처리 실패 - ID: " + orderId, e);
+        }
     }
 
     public int getStock() {
         return stock;
+    }
+
+    // Good: RuntimeException 상속 (Unchecked)
+    public static class OrderProcessingException extends RuntimeException {
+        // 중요: Throwable 타입으로 받아서 super에 넘겨야 원인 추적 가능
+        public OrderProcessingException(String message, Throwable cause) {
+            super(message, cause);
+        }
     }
 }
