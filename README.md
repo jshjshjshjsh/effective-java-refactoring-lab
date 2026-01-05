@@ -31,6 +31,14 @@
 | **05** | **31** | **[Item 31] 한정적 와일드카드를 사용해 API 유연성을 높이라** | [#17](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/17) | [#18](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/18) | ✅ 완료 |
 | **05** | **34** | **[Item 34] int 상수 대신 열거 타입(Enum)을 사용하라** | [#19](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/19) | [#20](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/20) | ✅ 완료 |
 | **07** | **45** | **[Item 45] 스트림은 주의해서 사용하라** | [#21](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/21) | [#22](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/22) | ✅ 완료 |
+| **08** | **53** | **[Item 53] 가변인수는 신중히 사용하라** | [#23](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/23) | [#24](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/24) | ✅ 완료 |
+| **08** | **55** | **[Item 55] 옵셔널 반환은 신중히 하라** | [#25](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/25) | [#26](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/26) | ✅ 완료 |
+| **08** | **56** | **[Item 56] 공개 API 요소에는 항상 문서화 주석을 작성하라** | [#27](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/27) | [#28](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/28) | ✅ 완료 |
+| **09** | **60** | **[Item 60] 정확한 답이 필요하다면 float와 double은  피하라** | [#29](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/29) | [#30](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/30) | ✅ 완료 |
+| **09** | **63** | **[Item 63] 문자열 연결은 느리니 주의하라** | [#31](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/31) | [#32](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/32) | ✅ 완료 |
+| **10** | **69, 77** | **[Item 69] 예외는 진짜 예외 상황에만 써라 / [Item 77] 예외를 무시하지 말라)** | [#33](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/33) | [#34](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/34) | ✅ 완료 |
+| **10** | **70, 71, 72** | **[Item 70, 71, 72] 표준 예외와 비검사 예외를 사랑하라** | [#35](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/35) | [#36](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/36) | ✅ 완료 |
+| **10** | **73, 75, 76** | **[Item 73] 예외 번역 / [Item 75] 상세 메시지 / [Item 76] 실패 원자성** | [#37](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/issues/37) | [#38](https://github.com/jshjshjshjsh/effective-java-refactoring-lab/pull/38) | ✅ 완료 |
 
 > * **PR / Issue**: 학습이 완료된(Closed) PR 또는 Issue 번호를 링크합니다.
 > * **Status**: 🏃 진행 중, ✅ 완료, 🔒 예정
